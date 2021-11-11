@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+}
+button{
+    font-size: 1rem;
+    border: 1px solid black;
+    background-color:azure;
+}
+.buttonES{
+    grid-column: span 2;
+}
+.display{
+    grid-column: 1/-1;
+    background-color: azure;
+    display: flex;
+    align-items: center;
+}
