@@ -1,33 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Calculadora</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css" />
+	<title>Calculadora</title>
+
 </head>
+
 <body background="img.jpg">
-    <div class="container">
-        <div class="display">Display</div>
-        <button class="buttonES">AC</button>
-        <button>DEL</button>
-        <button>/</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>*</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>+</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>,</button>
-        <button>0</button>
-        <button class="buttonES">=</button>
-    </div>
-    <script src="main.js"></script>
+	<div class="main">
+		<form name="Calcular">
+			<input id="display" class="display maincolor"> <br>
+
+			<input type="botton" class="text1 maincolor" value="C" onclick="this.form.display.value=0">
+			<input type="button" class="num maincolor" value="DEL" onclick="deleteChar(this.form.display)">
+			<input type="button" class="num salmo" value="-" onclick="addChar(this.form.display, '-')">
+
+			
+			<input type="button" class="num yellow" value="√" onclick="if(checkNum(this.form.display.value)) { sqrt(this.form) }"> <br>
+			<input type="button" class="num maincolor" value="7" onclick="addChar(this.form.display, '7')"> 
+			<input type="button" class="num maincolor" value="8" onclick="addChar(this.form.display, '8')">
+			<input type="button" class="num maincolor" value="9" onclick="addChar(this.form.display, '9')">
+			<input type="button" class="num blue" value="+" onclick="addChar(this.form.display, '+')"><br>
+			
+
+			<input type="button" class="num maincolor" value="4" onclick="addChar(this.form.display, '4')">
+			<input type="button" class="num maincolor" value="5" onclick="addChar(this.form.display, '5')">
+			<input type="button" class="num maincolor" value="6" onclick="addChar(this.form.display, '6')">
+			<input type="button" class="num gre" value="*" onclick="addChar(this.form.display, '*')"> <br>
+
+
+			<input type="button" class="num maincolor" value="1" onclick="addChar(this.form.display, '1')">
+			<input type="button" class="num maincolor" value="2" onclick="addChar(this.form.display, '2')">
+			<input type="button" class="num maincolor" value="3" onclick="addChar(this.form.display, '3')">
+			<input type="button" class="num ora" value="/" onclick="addChar(this.form.display, '/')"> <br>
+
+			<input type="button" class="num maincolor" value="." onclick="addChar(this.form.display, '.')">
+			<input type="button" class="num maincolor" value="0" onclick="addChar(this.form.display, '0')">
+			<input type="button" class="num pin" value="trc" onclick="if(checkNum(this.form.display.value)) { trunc(this.form) }">	
+			<input type="button" class="num pur"  value="=" onclick="if(checkNum(this.form.display.value)) { compute(this.form) }">
+
+
+
+			<!-- <input type="text" class="text maincolor" 
+					name="text1" disabled><br>
+
+            <input type="button" class="num yellow" 
+					name="radbtn" value="√" onclick="displaynum(radbtn.value)">
+            <input type="button" class="num thistle" 
+					name="truncbtn" value="trc" onclick="displaynum(truncbtn.value)">
+            <input type="button" class="num salmo" 
+					name="expbtn" value="^" onclick="exponenciacao(expbtn.value)">
+
+            
+			<input type="text" class="text1 maincolor" 
+					name="text12" value="CE" onclick="location.reload()"><br>
+					
+			<input type="button" class="num maincolor" 
+					name="btn9" value="9" onclick="displaynum(btn9.value)">
+			<input type="button" class="num maincolor" 
+					name="btn8" value="8" onclick="displaynum(btn8.value)">
+			<input type="button" class="num maincolor" 
+					name="btn7" value="7" onclick="displaynum(btn7.value)">
+			<input type="button" class="num blue" 
+					name="addbtn" value="+" onclick="displaynum(addbtn.value)"><br>
+
+			<input type="button" class="num maincolor" 
+					name="btn6" value="6" onclick="displaynum(btn6.value)">
+			<input type="button" class="num maincolor" 
+					name="btn5" value="5" onclick="displaynum(btn5.value)">
+			<input type="button" class="num maincolor" 
+					name="btn4" value="4" onclick="displaynum(btn4.value)">
+			<input type="button" class="num pin" 
+					name="subbtn" value="-" onclick="displaynum(subbtn.value)"><br>
+
+			<input type="button" class="num maincolor" 
+					name="btn3" value="3" onclick="displaynum(btn3.value)">
+			<input type="button" class="num maincolor" 
+					name="btn2" value="2" onclick="displaynum(btn2.value)">
+			<input type="button" class="num maincolor" 
+					name="btn1" value="1" onclick="displaynum(btn1.value)">
+			<input type="button" class="num gre" 
+					name="mulbtn" value="*" onclick="displaynum(mulbtn.value)"><br>
+
+			<input type="button" class="num maincolor" 
+					name="dot" value="." onclick="displaynum(dot.value)">
+			<input type="button" class="num maincolor" 
+					name="btn0" value="0" onclick="displaynum(btn0.value)">
+			<input type="button" class="num pur" 
+					name="eqlbtn" value="=" onclick="text1.value=eval(text1.value)">
+			<input type="button" class="num ora" 
+					name="divbtn" value="/" onclick="displaynum(divbtn.value)"><br> -->
+		</form>
+	</div>
 </body>
+<script src="main.js"></script>
+
 </html>
