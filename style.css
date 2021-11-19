@@ -13,17 +13,28 @@ body{
   justify-content: center;
 }
 
-input{
+button{
   color:#fff;
   padding:17px;
   outline:none;
   font-size: 30px;
   font-family: 'Bebas Neue', cursive;
   border-radius: 25%;
+
 }
 
 .maincolor{
   background-color: #000;
+}
+
+.col{
+  display: inline-block;
+  margin-right: 1px;
+  margin-left: 1px;
+}
+
+h1{
+  color:lightblue;
 }
 
 .num{
@@ -32,8 +43,12 @@ input{
 }
 
 .display{
-  width: 255px;
-  height: 26px;
+  color:#fff;
+  text-align: right;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 30px;
+  width: 293px;
+  height: 80px;
   border-radius: 22px;
   letter-spacing: 5px;
   text-align: center;
@@ -86,5 +101,3 @@ input{
 .salmo{
     background-color: #FA8072;
 } 
-
- 

@@ -11,38 +11,72 @@
 
 <body background="img.jpg">
 	<div class="main">
-		<form name="Calcular">
-			<input id="display" class="display maincolor"> <br>
+		<h1>Calculadora</h1>
+			<div class="card-header">
+				<p id="display" class="display maincolor"> 0 </p>
+			</div>
+			<div class="col">
+				<button id="c" type="button"class ="num maincolor">C</button>
+			</div> 
+			<div class="col">
+				<button id="trc" type="button"class ="num salmo">TRC</button>
+			</div> 
+			<div class="col">
+				<button id="rad" type="button"class ="num ora">√</button>
+			</div> 
+			<div class="col">
+				<button id="multi" type="button"class ="num yellow">*</button>
+			</div><br>
+			<div class="col">
+				<button id="n7" type="button"class ="num maincolor">7</button>
+			</div>
+			<div class="col">
+				<button id="n8" type="button"class ="num maincolor">8</button>
+			</div>
+			<div class="col">
+				<button id="n9" type="button"class ="num maincolor">9</button>
+			</div> 
+			<div class="col">
+				<button id="adicao" type="button"class ="num pur">+</button>
+			</div> <br>
+			<div class="col">
+				<button id="n4" type="button"class ="num maincolor">4</button>
+			</div> 
+			<div class="col">
+				<button id="n5" type="button"class ="num maincolor">5</button>
+			</div>
+			<div class="col">
+				<button id="n6" type="button"class ="num maincolor">6</button>
+			</div> 
+			<div class="col">
+				<button id="sub" type="button"class ="num gre">-</button>
+			</div> <br>
+			<div class="col">
+				<button id="n1" type="button"class ="num maincolor">1</button>
+			</div> 
+			<div class="col">
+				<button id="n2" type="button"class ="num maincolor">2</button>
+			</div> 
+			<div class="col"> 
+				<button id="n3" type="button"class ="num maincolor">3</button>
+			</div> 
+			<div class="col">
+				<button id="expo" type="button"class ="num pin">^</button>
+			</div> <br>
+			<div class="col">
+				<button id="virg" type="button"class ="num maincolor">,</button>
+			</div>
+			<div class="col">
+				<button id="n0" type="button"class ="num maincolor">0</button>
+			</div> 
+			<div class="col">
+				<button id="div" type="button"class ="num thistle">/</button>
+			</div>
+			<div class="col">
+				<button id="equals" type="button"class ="num blue">=</button>
+			</div>
 
-			<input type="botton" class="text1 maincolor" value="C" onclick="this.form.display.value=0">
-			<input type="button" class="num maincolor" value="DEL" onclick="deleteChar(this.form.display)">
-			<input type="button" class="num salmo" value="-" onclick="addChar(this.form.display, '-')">
-
-			
-			<input type="button" class="num yellow" value="√" onclick="if(checkNum(this.form.display.value)) { sqrt(this.form) }"> <br>
-			<input type="button" class="num maincolor" value="7" onclick="addChar(this.form.display, '7')"> 
-			<input type="button" class="num maincolor" value="8" onclick="addChar(this.form.display, '8')">
-			<input type="button" class="num maincolor" value="9" onclick="addChar(this.form.display, '9')">
-			<input type="button" class="num blue" value="+" onclick="addChar(this.form.display, '+')"><br>
-			
-
-			<input type="button" class="num maincolor" value="4" onclick="addChar(this.form.display, '4')">
-			<input type="button" class="num maincolor" value="5" onclick="addChar(this.form.display, '5')">
-			<input type="button" class="num maincolor" value="6" onclick="addChar(this.form.display, '6')">
-			<input type="button" class="num gre" value="*" onclick="addChar(this.form.display, '*')"> <br>
-
-
-			<input type="button" class="num maincolor" value="1" onclick="addChar(this.form.display, '1')">
-			<input type="button" class="num maincolor" value="2" onclick="addChar(this.form.display, '2')">
-			<input type="button" class="num maincolor" value="3" onclick="addChar(this.form.display, '3')">
-			<input type="button" class="num ora" value="/" onclick="addChar(this.form.display, '/')"> <br>
-
-			<input type="button" class="num maincolor" value="." onclick="addChar(this.form.display, '.')">
-			<input type="button" class="num maincolor" value="0" onclick="addChar(this.form.display, '0')">
-			<input type="button" class="num pin" value="trc" onclick="if(checkNum(this.form.display.value)) { trunc(this.form) }">	
-			<input type="button" class="num pur"  value="=" onclick="if(checkNum(this.form.display.value)) { compute(this.form) }">
-		</form>
-	</div>
+	</div>		
 </body>
 <script src="main.js"></script>
 
